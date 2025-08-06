@@ -8,14 +8,22 @@
 }
 
 /* shared styles */
+
 /* ek e kaj barbar jate kora nah lag ejnno ei portion th use kora hoy */
+
 .display-flex{
     display: flex;
 }
+
+.text-primary{
+    color: #FF900E;
+}
+
 /* dark-02 */
 .text-gray{
     color: #424242;
 } 
+
 /* dark-03 */
 .text-light-gray{
     color: #727272;
@@ -26,40 +34,63 @@
 .btn-primary{
     background-color: #FF900E;
     color: #FFFFFF ;
+
     /* color manr btn er modhher text gulor clr chng hbe */
+
     padding: 20px 24px;
     font-size: 1.25rem;
     font-weight: 600px;
     border-radius: 8px;
     border: none;
+
     /* border none deyar karone btn er sesh part er black ekta clr chilo oith shore jabe */
     
     /* margin-bottom: 50px; */
 }
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main > section{
+    margin-top: 110px;
+}
+.section-title{
+    /* font-size: 45px; use korbonh fig a dea ache tao */
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
 /* header styles */
 
 
 /* navbar styles */
+
 .navbar{
     justify-content: space-between;
     /* eta korle logo mane brnd name  a nav item er majhe distance hbe 2 ta jinish 2 side a chole jabe */
     align-items: center;
     /* brand a font size boro korar karone navitem gulo upoe gese ejnno center  a anar jnno abr align item center kora lagse */
 }
+
 .nav-links{
     text-decoration: none;
     /* under-line h shore jabe anchor tag er by default jeta dea thake  */
     font-weight: 500px;
  }
-.nav-item{
+
+ .nav-item{
     list-style: none;
     margin-right: 30px;
 }
+
 .brand{
     font-weight: 700px;
     font-size: 2.5rem;
     /* 16px = 1remm */
 }
+
 .navbar, .banner{
     max-width: 1440px;
     margin: 0 auto;
@@ -74,18 +105,59 @@
     text-align: center;
     margin-bottom: 50px; 
 }
+
 .banner-title{
     font-weight: 700px;
     font-size: 4rem;
 }
+
 .banner-img{
     width: 100%;
     /* etar karone img device er upor depend korer size hye jabe */
 }
 
+/* teams and features related styles */
+
+.teams{
+    align-items: center;
+    /* 4ta chobi box shape er modhhe eshe porbe fig filer moto *imp* */
+}
+
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.our-features{
+    margin-left: 130px;
+    max-width: 530px;
+    /* max-wdth er karonefetatures er box tar size chot ohye jabe 530px jeta fig file a deya ache  */
+}
+
+#quick-list{
+    font-weight: 500;
+}
 /* responsive meda query */
 @media screen and (max-width: 576px) {
-     .navbar, .nav-links{
+     .navbar, 
+     .nav-links, 
+     .teams{
         flex-direction: column;
      }
+     .team-img-container{
+        grid-template-columns: repeat(1, 1fr);
+     }
+     .our-features{
+        margin-left: 20px;
+     }
+} 
+
+/* medium devices */
+@media screen and (min-width: 576px) and (max-width:992px) {
+    .teams{
+        flex-direction: column;
+    }
+    .our-features{
+        margin: 50px auto;
+    }
 }
